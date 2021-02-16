@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
+    <title>GAME</title>
+</head>
+<body onresize="ajustaTamanhoPalcoJogo()">
+
+    <div class="painel">
+        <div class="vidas">
+            <img id="v1" src="images/coracao_cheio.png" />
+            <img id="v2" src="images/coracao_cheio.png" />
+            <img id="v3" src="images/coracao_cheio.png" />
+        </div>
+
+        <div class="cronometro">
+            Tempo restande: <span id="cronometro"></span>
+        </div>
+    </div>
+    
+    <!-- ABRINDO TAG SCRIPT -->
+    <script>
+        // Coloca dentro da tag referente ao id cronometro, o valor do tempo, ou seja, o cronometro da aplicação
+        document.getElementById('cronometro').innerHTML = tempo;
+
+        /* Intervalo de tempo em que será executada a função.
+           Isso gera 1 posição aleatória da mosca a cada 1 segundo
+        */
+        var criaMosca = setInterval(() => {
+            /* ACESSANDO FUNÇÃO */
+            posicaoRandomica()
+        }, moscaTempo);
+    </script>
+
+</body>
+</html>
